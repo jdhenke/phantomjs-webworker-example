@@ -4,7 +4,7 @@
     var worker = new Worker("/worker.js");
     // post message
     worker.postMessage("whatever");
-    // when worker replies, print its data to the console
+    // when worker replies, print its message's data to the console
     worker.onmessage = function(evt) {
       console.log("worker says \"" + evt.data + "\"");
     };
