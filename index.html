@@ -1,0 +1,12 @@
+<html>
+  <script>
+    // create worker
+    var worker = new Worker("/worker.js");
+    // post message
+    worker.postMessage("herro");
+    // when worker replies, print its data to the console
+    worker.onmessage = function(evt) {
+      console.log("worker says \"" + evt.data + "\"");
+    };
+  </script>
+</html>
